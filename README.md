@@ -15,7 +15,7 @@ Dodge cacti and pterodactyls, run into the night, and chase your best score! (�
 
 - The little dino runs all by itself, so you only have to jump and duck! ε=ε=ε=┌(˶ᵔ ᵕ ᵔ˶)┘
 - Cacti pop up along the way. Hop over them (ﾉ>ω<)ﾉ
-- From 220 points, pterodactyls fly in, too. Jump or duck under them! ┗(•̀へ •́ )┓
+- From 220 points, pterodactyls fly in, too. Jump over them or duck under them! ┗(•̀へ •́ )┓
 - The longer you run, the faster it gets (ﾟдﾟ;)
 - Every 500 points, day turns to night and back again ☾ ⋆｡˚ (－ω－) zzZ
 - One bump and it's Game Over... but you can always try again (｡•́︿•̀｡)
@@ -38,12 +38,14 @@ After that, add `-Offline` to play without internet. (｡•̀ᴗ-)✧
 | Key | Action |
 | --- | --- |
 | Space / ↑ / W | Jump — hold to go higher! ヽ(•‿•)ノ |
-| ↓ / S | Duck or fall faster (・ω・) |
+| ↓ / S | Duck, or fall faster mid-jump (・ω・) |
 | P / Esc | Pause / resume (˘ᵕ˘) |
-| Enter / R | Restart after Game Over / resume |
-| Left click | Start, jump, resume, or restart after Game Over |
+| Enter / R | Start, resume, or restart after Game Over (ง •̀_•́)ง |
+| Left click | Jump, just like Space ♡ |
 
-Switching windows pauses the adventure. Your best score is saved for next time! (´｡• ᵕ •｡`)
+Space and left click also start, resume, and restart, just like Enter.
+Switching windows pauses the adventure.
+Your best score is saved in `~/.dinosaur-game/high-score.txt` for next time! (´｡• ᵕ •｡`)
 
 ## Little checkup (๑•̀ㅂ•́)و✧
 
