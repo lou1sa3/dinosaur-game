@@ -5,6 +5,7 @@
 A Java recreation of Google's classic Dinosaur Game, built with JavaFX.
 Dodge cacti and pterodactyls, run into the night, and chase your best score! (ง •̀_•́)ง
 
+<<<<<<< HEAD
 <p align="center">
   <a href="docs/gameplay.mp4"><img src="docs/gameplay.gif" alt="Dino running into the night, dodging cacti and pterodactyls until Game Over" width="800"></a>
 </p>
@@ -19,6 +20,11 @@ Dodge cacti and pterodactyls, run into the night, and chase your best score! (�
 - The longer you run, the faster it gets (ﾟдﾟ;)
 - Every 500 points, day turns to night and back again ☾ ⋆｡˚ (－ω－) zzZ
 - One bump and it's Game Over... but you can always try again (｡•́︿•̀｡)
+=======
+## Gameplay
+
+<video src="2026-10-15 22-49-46.mp4" controls width="800"></video>
+>>>>>>> 2a434b0a672bb1a49a59613cba26dd6174715e3c
 
 ## Let's play! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
 
