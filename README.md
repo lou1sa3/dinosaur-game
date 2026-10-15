@@ -1,83 +1,40 @@
-# dinosaur-game
+# dinosaur-game (˶ᵔ ᵕ ᵔ˶)
+
+**A little dino, a long way to go...♡**
 
 A Java recreation of Google's classic Dinosaur Game, built with JavaFX.
+Dodge cacti and pterodactyls, run into the night, and chase your best score! (ง •̀_•́)ง
 
-A little endless runner you can play locally, featuring your dinosaur pixel art,
-animated legs, cacti, pterodactyls, a day/night cycle, and a saved high score.
+## Let's play! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
 
-## Running on Windows
+You'll need **Java 25+**. The launcher can also find the JDK bundled with VS Code's Red Hat Java extension.
 
-Requires a **JDK with Java 25 or later**. The launcher also detects the JDK bundled
-with the **Language Support for Java by Red Hat** extension for VS Code.
-
-From the project directory:
+Run this from the project folder:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\run.ps1 play
 ```
 
-On the first launch, the script downloads Maven, verifies its SHA-512 checksum,
-and downloads the JavaFX dependencies into `.tools/`. It does not change any
-global Java or Maven installation. UNC network paths are supported.
+The first launch downloads Maven and JavaFX into `.tools/`.
+After that, add `-Offline` to play without internet. (｡•̀ᴗ-)✧
 
-After the first successful launch, you can play without an internet connection:
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\run.ps1 play -Offline
-```
-
-If you already have a JDK and Maven configured, you can also use `mvn javafx:run`.
-
-## Controls
+## Tiny paws, big jumps (•ᴗ•)
 
 | Key | Action |
 | --- | --- |
-| Space, ↑, or W | Start / jump; hold for a higher jump |
-| ↓ or S | Duck; fall faster while in the air |
-| P or Esc | Pause / resume |
-| Enter or R | Restart after Game Over; resume when paused |
-| Left mouse button | Start, jump, resume, or restart after Game Over |
+| Space / ↑ / W | Jump — hold to go higher! ヽ(•‿•)ノ |
+| ↓ / S | Duck or fall faster (・ω・) |
+| P / Esc | Pause / resume (˘ᵕ˘) |
+| Enter / R | Restart after Game Over / resume |
+| Left click | Start, jump, resume, or restart after Game Over |
 
-The game pauses automatically when you switch to another window. Press Space,
-P, or click to resume. Pterodactyls appear from 220 points onward, and the time
-of day changes every 500 points. Your high score is saved in
-`%USERPROFILE%/.dinosaur-game/high-score.txt`.
+Switching windows pauses the adventure. Your best score is saved for next time! (´｡• ᵕ •｡`)
 
-## Testing and building
+## Little checkup (๑•̀ㅂ•́)و✧
 
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\run.ps1 test
-powershell -NoProfile -ExecutionPolicy Bypass -File .\run.ps1 ui-test
-powershell -NoProfile -ExecutionPolicy Bypass -File .\run.ps1 verify
-```
+Replace `play` in the command above with `test` to run the tests,
+`ui-test` to check a real game window, or `verify` to test and build.
 
-The standard tests check movement, collisions, speed, pausing, restarting,
-obstacle sequences, the day/night cycle, and high-score storage without opening
-a game window. The additional UI test opens a real window, checks keyboard and
-mouse input and resizing, and saves screenshots in `target/ui-smoke/`.
-It requires a graphical desktop session. With Maven installed, use
-`mvn test`, `mvn -Ddino.uiTests=true test`, or `mvn verify`.
+More details: [game design](docs/game-design.md) · [requirements](docs/requirements.md)
 
-## Project structure
-
-```text
-src/main/java/com/dinosaurgame/
-  Main.java                  Application and window lifecycle
-  game/                      Game logic without JavaFX dependencies
-    GameEngine.java          Game states, speed, score, and obstacles
-    Dinosaur.java            Jumping, ducking, and hitboxes
-    Obstacle.java            Cacti and pterodactyls
-    Hitbox.java              Collision detection
-    GameState.java           Ready, running, paused, and game over
-  ui/
-    GameView.java            Game loop, input, and resizing
-    GameRenderer.java        Scenery, obstacles, and on-screen text
-    DinoSprite.java          Original dinosaur template and animations
-  storage/HighScoreStore.java Saving and loading the high score
-src/test/java/               Game logic, storage, and window tests
-docs/                       Requirements and game design
-run.ps1                     Portable Windows launcher for playing and testing
-pom.xml                     Java, JavaFX, and test configuration
-```
-
-`.tools/` and `target/` contain generated files and are ignored by Git.
+*rawr! take a little break, then try again ♡ (づ｡◕‿‿◕｡)づ*
